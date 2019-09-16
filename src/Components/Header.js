@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {NavLink} from 'react-router-dom'
 
 const HeaderStyle = styled.header`
   height: 20%;
@@ -24,7 +25,7 @@ const HeaderMenu = styled.div`
   
 `
 
-const MenuItem = styled.div`
+const MenuItem = styled(NavLink)`
 
   cursor: pointer;
   padding: 0.6em 2.5em;
@@ -35,10 +36,9 @@ const MenuItem = styled.div`
   background: ${(props)=>props.active ? '#f0f0f0' : ''};
   opacity: ${(props)=>props.active ? 1 : 0.6};
   text-decoration: ${(props)=>props.active ? 'underline' : 'none'};
-  &:hover{
-  background:#f0f0f0;
-
-}
+  &.current, &:hover{
+    background:#f0f0f0;
+  }
 `
 
 function Header() {
@@ -46,9 +46,9 @@ function Header() {
     <HeaderStyle>
       <HeroLogo>A Grey Guy</HeroLogo>
       <HeaderMenu>
-        <MenuItem active>Home</MenuItem>
-        <MenuItem>Posts</MenuItem>
-        <MenuItem>About</MenuItem>
+        <MenuItem activeClassName="current" exact to="/">Home</MenuItem>
+        <MenuItem activeClassName="current" to="/posts">Posts</MenuItem>
+        <MenuItem activeClassName="current" to="/about">About</MenuItem>
       </HeaderMenu>
 
     </HeaderStyle>
