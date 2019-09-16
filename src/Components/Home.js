@@ -11,7 +11,8 @@ const Quote = styled.div`
 
 const HomeContent = styled.div`
   display:grid;
-  grid-template-areas: 'main .' 'main .';
+  grid-template-areas: '. main .';
+  grid-template-columns: 1fr 1.5fr 1fr;
   flex:1;
   grid-gap:20px;
 `
@@ -25,9 +26,30 @@ const Home = () => {
         or by your Deeds!"
       </Quote>
       <HomeContent>
-        <FeaturedBlogs main>Blog</FeaturedBlogs>
-        <FeaturedBlogs></FeaturedBlogs>
-        <FeaturedBlogs></FeaturedBlogs>
+        <FeaturedBlogs main>
+          <img src="https://unsplash.it/200"></img>
+          <figcaption>
+            <h1>Lorem ipsum</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, aut.</p>
+            <button>read</button>
+          </figcaption>
+        </FeaturedBlogs>
+        <FeaturedBlogs>
+        <img src="https://unsplash.it/200"></img>
+          <figcaption>
+            <h1>Lorem ipsum</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, aut.</p>
+            <button>read</button>
+          </figcaption>
+        </FeaturedBlogs>
+        <FeaturedBlogs>
+        <img src="https://unsplash.it/200"></img>
+          <figcaption>
+            <h1>Lorem ipsum</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, aut.</p>
+            <button>read</button>
+          </figcaption>
+        </FeaturedBlogs>
       </HomeContent>
     </>
   )

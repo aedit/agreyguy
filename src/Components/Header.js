@@ -44,7 +44,7 @@ const MenuItem = styled.div`
 function Header() {
   return (
     <HeaderStyle>
-      <HeroLogo>A grey Guy</HeroLogo>
+      <HeroLogo>A Grey Guy</HeroLogo>
       <HeaderMenu>
         <MenuItem active>Home</MenuItem>
         <MenuItem>Posts</MenuItem>
