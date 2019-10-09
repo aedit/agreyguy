@@ -33,11 +33,22 @@ const MenuItem = styled(NavLink)`
   transition: background 0.1s ease-in;
   flex:1;
   text-align:center;
+  font-weight:bolder;
+  letter-spacing:1px;
+  color: #828282;
   background: ${(props)=>props.active ? '#f0f0f0' : ''};
   opacity: ${(props)=>props.active ? 1 : 0.6};
   text-decoration: ${(props)=>props.active ? 'underline' : 'none'};
   &.current, &:hover{
-    background:#f0f0f0;
+    background:#161616;
+    color:#d2d2d2;
+    opacity: 0.6;
+  }
+  &.current{
+    opacity: 1;
+  }
+  @media screen and (max-width: 390px){
+    padding: 0.6em 2em;
   }
 `
 
