@@ -15,6 +15,7 @@ const HomeContent = styled.div`
   grid-template-columns: 1fr 1.5fr 1fr;
   flex:1;
   grid-gap:20px;
+  height: calc(100vh - 340px);
 
   @media screen and (max-width: 1024px){
     display:flex;
